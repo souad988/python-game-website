@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% block content %}
+<div align="center">
+    <table>
+        <thead><tr><th>img</th><th>first_name</th><th>last_name</th><th>adresse</th></tr></thead>
+            <tbody>{%for chef in chef_names %}<tr>
+                <td><img src="{{chef.image_url}}" width="100" height="100" ></td>
+                <td> {{chef.first_name}}</td>
+                <td> {{chef.last_name}}</td>
+                <td> {{chef.adr}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+    </table>
+</div>
+{%endblock%}
